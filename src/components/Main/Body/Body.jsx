@@ -46,7 +46,7 @@ class Body extends Component {
           <h3>Color Legend</h3>
           <ul>
             <li><span className="color-box" style={{backgroundColor: "rgba(219, 57, 57, 0.8)"}}></span> Current Swappers</li>
-            <li><span className="color-box" style={{backgroundColor: "rgba(78, 216, 96, 0.8)"}}></span> Current Bubble/Quick/Heap/Merge</li>
+            <li><span className="color-box" style={{backgroundColor: "rgba(78, 216, 96, 0.8)"}}></span> Current Selected</li>
             <li><span className="color-box" style={{backgroundColor: "rgba(237, 234, 59, 0.8)"}}></span> Pivot</li>
             <li><span className="color-box" style={{backgroundColor: "rgba(169, 92, 232, 0.8)"}}></span> Current Sorted</li>
             <li><span className="color-box" style={{backgroundColor: "rgba(66, 134, 244, 0.8)"}}></span> Default</li>
@@ -59,7 +59,7 @@ class Body extends Component {
                 currentQuickTwo.includes(index) || currentHeapThree.includes(index) ||
                 currentMergeX.includes(index) ?
                   "rgba(78, 216, 96, 0.8)" : pivot === index ?
-                    "rgba(237, 234, 59, 0.8)" : currentSorted.includes(index) ?
+                    "rgb(248, 243, 43)" : currentSorted.includes(index) ?
                       "rgba(169, 92, 232, 0.8)" : "rgba(66, 134, 244, 0.8)";
             return <div
               className="arrayElement"

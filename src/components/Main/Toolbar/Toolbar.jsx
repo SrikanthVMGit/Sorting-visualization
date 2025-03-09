@@ -47,7 +47,7 @@ class Toolbar extends Component {
     const speed = 1570 - Math.pow(array.length, 2) > 0 ?
       1570 - Math.pow(array.length, 2) : 0;
 
-    const color = isRunning ? "rgba(214, 29, 29, 0.8)" : "white";
+    const color = isRunning ? "rgba(255, 106, 106, 0.8)" : "white";
 
     const cursor = isRunning ? "auto" : "pointer";
 
@@ -59,7 +59,6 @@ class Toolbar extends Component {
           onClick={!isRunning ? () => generateArray(array.length) : null}>
           Generate New Array
         </div>
-        <div className="separator"></div>
         <div
           id="arraySize"
           style={{color: color}}>
@@ -74,7 +73,7 @@ class Toolbar extends Component {
           disabled={isRunning ? "disabled" : null}
           onChange={this.handleChange}
           />
-        <div className="separator"></div>
+        
         <div
           className={algorithm === "mergeSort" ? "currentAlgorithmButton" : "algorithmButton"}
           onClick={() => this.handleClick("mergeSort")}>
@@ -95,7 +94,6 @@ class Toolbar extends Component {
           onClick={() => this.handleClick("bubbleSort")}>
           Bubble Sort
         </div>
-        <div className="separator"></div>
         { algorithm ? <div
             id="sort"
             style={{color: color, cursor: cursor}}
